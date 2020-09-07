@@ -1,0 +1,16 @@
+[MESSAGES CONTROL]
+
+disable=R1705, C0301, C0115, C0116, W1202, R1720,
+        C0114, # missing-module-docstring
+
+[BASIC]
+
+# Good variable names which should always be accepted, separated by a comma
+good-names=i,j,k,ex,e,logger
+
+[FORMAT]
+max-line-length=100
+
+
+[MASTER]
+init-hook='import sys; sys.path.append("/Users/melvinl/aegon/substantial-shareholdership/src/")'
