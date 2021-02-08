@@ -1,4 +1,7 @@
 pytest
 pytest-cov
-#boto3
-#moto
+#pysqlite3
+boto3
+requests
+moto
+pyathena

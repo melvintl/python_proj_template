@@ -1,0 +1,6 @@
+[html]
+directory = .htmlcov 
+
+[run]
+omit = 
+    src/a.py

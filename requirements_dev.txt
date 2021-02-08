@@ -1,6 +1,7 @@
 ipdb
 black
 pylint
-mypy
+#mypy
 flake8
-
+pytest-picked
+pytest-xdist

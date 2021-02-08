@@ -9,7 +9,7 @@ disable=R1705, C0301, C0115, C0116, W1202, R1720,
 good-names=i,j,k,ex,e,logger
 
 [FORMAT]
-max-line-length=100
+max-line-length=88
 
 
 [MASTER]
