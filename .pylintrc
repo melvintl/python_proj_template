@@ -13,4 +13,4 @@ max-line-length=88
 
 
 [MASTER]
-init-hook='import sys; sys.path.append("/Users/melvinl/aegon/substantial-shareholdership/src/")'
+init-hook='import sys; sys.path.append("/Users/melvinl/proj/src/")'
