@@ -1,0 +1,11 @@
+[flake8]
+/* ignore = E226,E302,E41 */
+
+ignore =
+    E501, # we use black to format and people can use wordwrap in the editor!
+    W503, # ignore line break before binary operator as it conflicts with black
+
+max-line-length = 88
+exclude = infra,.venv,venv,lambdas,.git,__pycache__,.htmlcov,.deploy_package
+max-complexity = 10
+

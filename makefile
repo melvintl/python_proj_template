@@ -19,6 +19,12 @@ help:
 	@echo "make test"
 	@echo "       run tests"
 
+flake8:
+	flake8 .
+
+pylint:
+	pylint src/
+
 clean: clean_env clean_deployment_package
 	rm -rf .pytest_cache
 	rm -rf htmlcov
@@ -41,9 +47,21 @@ setup_dev:
 	pip install -r requirements_dev.txt; \
 	pip install -r requirements_test.txt; \
 
-test:
+test_1:
 	. $(ROOT_DIR)/$(VENV)/bin/activate; \
 	pytest -s --cov-report term-missing --cov=src --cov-report html; \
+
+test:
+	python -m pytest -m "not integration" -s --pdb --cov-report term-missing --cov=src --cov-report html; \
+
+test_integration:
+	python -m pytest -m "integration" --pdb --cov-report term-missing --cov=src --cov-report html; \
+
+test_all:
+	python -m pytest --pdb --cov-report term-missing --cov=src --cov-report html; \
+
+test_my:
+	python -m pytest -s --pdb -o log_cli=True -p no:warnings --picked \
 
 build_docker:
 	docker build -t mylambda .
